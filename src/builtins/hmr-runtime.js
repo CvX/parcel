@@ -1,4 +1,4 @@
-var global = (1, eval)('this');
+var global = typeof global === "object" ? global : typeof window === "object" ? window : typeof self === "object" ? self : this;
 var OldModule = module.bundle.Module;
 function Module(moduleName) {
   OldModule.call(this, moduleName);
